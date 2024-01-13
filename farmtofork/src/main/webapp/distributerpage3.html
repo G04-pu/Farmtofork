@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Distributor Page 3</title>
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #ffcc00, #ff6699); /* Gradient Background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        div {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+</style>
+</head>
+<body>
+	<div>
+    <h1>Enter Distributor Data</h1>
+    <form action="di" method="post">
+        <label for="numberOfBatches">Number of Batches:</label>
+        <input type="number" id="numberOfBatches" name="numberOfBatches" required><br><br>
+
+        <!-- Fields for each batch -->
+        <div id="batchFields"></div>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+    <script>
+        document.getElementById('numberOfBatches').addEventListener('change', function () {
+            var numBatches = parseInt(this.value);
+            var batchFieldsDiv = document.getElementById('batchFields');
+            batchFieldsDiv.innerHTML = ''; // Clear previous fields
+
+            for (var i = 1; i <= numBatches; i++) {
+                batchFieldsDiv.innerHTML += '<label>Produce Tracking Number ' + i + ':</label>';
+                batchFieldsDiv.innerHTML += '<input type="text" name="produceTrackingNumber' + i + '" required><br>';
+                batchFieldsDiv.innerHTML += '<label>Batch Tracking Number ' + i + ':</label>';
+                batchFieldsDiv.innerHTML += '<input type="text" name="batchTrackingNumber' + i + '" required><br>';
+                batchFieldsDiv.innerHTML += '<label>Weight ' + i + ':</label>';
+                batchFieldsDiv.innerHTML += '<input type="number" step="0.01" name="weight' + i + '" required><br><br>';
+            }
+        });
+    </script>
+</body>
+</html>

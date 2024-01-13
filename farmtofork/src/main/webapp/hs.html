@@ -1,0 +1,65 @@
+<!-- Index.html file -->
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head> 
+	<meta charset="UTF-8"> 
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0">  
+	<title>QR Code Scanner / Reader 
+	</title> 
+
+
+      <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #ffcc00, #ff6699); /* Gradient Background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+       
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+        .container
+        {
+			 text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			
+		}
+    </style>
+</head> 
+
+<body> 
+	
+		<div class="container">
+    <h2>Search by Batch Tracking Number</h2>
+    <form action="ss" method="post">
+        <label for="batchTrackingNumber">Enter Batch Tracking Number:</label>
+        <input type="text" id="batchTrackingNumber" name="batchTrackingNumber" required><br><br>
+        <input type="submit" value="Search">
+    </form>
+    </div>
+	<div class="container"> 
+		<h1>Search by QR</h1> 
+		<div class="section"> 
+			<div id="my-qr-reader"> 
+			</div> 
+		</div> 
+	</div>
+	<script
+		src="https://unpkg.com/html5-qrcode"> 
+	</script> 
+	<script src="script.js"></script> 
+</body> 
+
+</html>

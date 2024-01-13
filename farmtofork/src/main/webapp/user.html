@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Page 3</title>
+      <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #ffcc00, #ff6699); /* Gradient Background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        div {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+	<div>
+    <h2>Search by Batch Tracking Number</h2>
+    <form action="ss" method="post">
+        <label for="batchTrackingNumber">Enter Batch Tracking Number:</label>
+        <input type="text" id="batchTrackingNumber" name="batchTrackingNumber" required><br><br>
+        <input type="submit" value="Search">
+    </form>
+    </div>
+</body>
+</html>

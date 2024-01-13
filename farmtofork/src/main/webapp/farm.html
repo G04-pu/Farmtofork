@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Farmer Page 3</title>
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #ffcc00, #ff6699); /* Gradient Background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        div {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+</style>
+</head>
+<body>
+	<div>
+    <h1>Welcome Farmer!</h1>
+   
+    <form action="FarmerPage3Servlet" method="post">
+        <label for="produceTrackingNumber">Enter Produce Tracking Number:</label><br>
+        <input type="text" id="produceTrackingNumber" name="produceTrackingNumber"><br><br>
+        
+        <label for="produceName">Enter Produce Name:</label><br>
+        <input type="text" id="produceName" name="produceName"><br><br>
+        
+        <label for="pesticideUsed">Enter Pesticide Used:</label><br>
+        <input type="text" id="pesticideUsed" name="pesticideUsed"><br><br>
+        
+        <!-- Add more fields if needed -->
+
+        <input type="submit" value="Submit">
+    </form>
+    </div>
+    <!-- Add more farmer-specific content as needed -->
+</body>
+</html>
